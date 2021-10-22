@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+  <form action="/action_page.php">
+  <label for="date">date:</label>
+  <input type="date" id="date" name="date">
+  <input type="submit">
+</form>
+<style>
+      img:hover {
+      -webkit-transform: scaleX(-1);
+       transform: scaleX(-1);</style>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+  </div>
+    
+ </body>
+ </html>
+ <style>
+
+body {
+    background-color:blue;
+    text-align:center;
+}
+
+#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    /
+    width: 40vw;
+    background: url(clock.png) no-repeat;
+    
+    background-size: 100%;
+}
+  
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+  
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+  
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 49.9%;
+    opacity: 0.8;
+}
+  
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
+}
+</style>
+
+ </form>
+ <body> 
+ <div  id="text">Aerial view of autumn forest road in morning fog. Mosele    Valley, Germany. stock photo</div>
+     <img src="https://media.istockphoto.com/photos/aerial-view-of-autumn-forest-road-in-morning-fog-mosele-valley-picture-id1266112334" width="1500" height="650">
+     <div id="text">Hiker relaxes on mountain ridge at sunrise stock photo</div>
+     <img src="https://media.istockphoto.com/photos/hiker-relaxes-on-mountain-ridge-at-sunrise-picture-id1256434595"width="1500" height="650">
+     <div id="text">Looking directly up at the skyline of the financial district in central London - stock image stock photo</div>
+      <img src="https://media.istockphoto.com/photos/looking-directly-up-at-the-skyline-of-the-financial-district-in-picture-id1215119911" width="1500" height="650">
+</body>
+<script>
+setInterval(() => {
+    d = new Date(); 
+    hr = d.getHours();
+    min = d.getMinutes();
+    sec = d.getSeconds();
+    hr_rotation = 30 * hr + min / 2; 
+    min_rotation = 6 * min;
+    sec_rotation = 6 * sec;
+  
+    hour.style.transform = `rotate(${hr_rotation}deg)`;
+    minute.style.transform = `rotate(${min_rotation}deg)`;
+    second.style.transform = `rotate(${sec_rotation}deg)`;
+}, 1000);
+</script>
